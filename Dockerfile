@@ -1,4 +1,4 @@
-FROM sameersbn/gitlab-ci-runner
+FROM ubuntu:trusty
 MAINTAINER Maikel Wever <maikelwever@gmail.com>
 
 RUN apt-get update
@@ -7,4 +7,3 @@ RUN apt-get install -y build-essential git sudo fakeroot
 
 ADD sudoers /etc/sudoers
 RUN chmod 0400 /etc/sudoers
-USER gitlab_ci_runner
